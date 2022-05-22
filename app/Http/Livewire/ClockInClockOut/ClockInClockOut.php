@@ -16,7 +16,7 @@ class ClockInClockOut extends Component
     public $sortField = 'created_at';
     public $sortDirection = 'desc';
 
-    //    phase::2 this function delete selected shift
+    //    iteration-2: this function delete selected shift
 
     public function deleteShift(\App\Models\ClockInClockOut $clock_in_clock_out)
     {
@@ -34,7 +34,7 @@ class ClockInClockOut extends Component
         $this->sortField = $sortField;
     }
 
-    //    phase::2 this function render shifts list page where we passed data with pagination
+    //    iteration-2: this function render shifts list page where we passed data with pagination
 
     public function render()
     {

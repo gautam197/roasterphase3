@@ -10,9 +10,6 @@
     </button>
     <!-- Search bar -->
     <div class="flex-1 px-4 flex justify-between sm:px-6 lg:max-w-6xl lg:mx-auto lg:px-8">
-        <div class="flex" style="align-items: center">
-            <img class="h-12  rounded-full" src="{{asset('logo.png')}}">
-        </div>
         @if(\Illuminate\Support\Facades\Auth::user()->hasRole('Staff'))
             <div class="flex-1 flex justify-center">
                 @php
@@ -20,8 +17,8 @@
                     $todayLatestClockInClockOut = count($todayClockInClockOut) > 0 ? collect($todayClockInClockOut[0]['clock_in_clock_out'])->last() : null;
                 @endphp
                 @if(($todayClockInClockOut && ((count($todayClockInClockOut) > 0 && $todayClockInClockOut[0]['status'] === 'UNAPPROVED')) || count($todayClockInClockOut) === 0))
-                    {{--                   phase-2:: clock in button--}}
-                    <div x-data="{ openClockIn: false }">
+                    {{--                   iteration-2: clock in button--}}
+                    <div  x-data="{ openClockIn: false }">
                         <button @click="openClockIn = true" type="button"
                                 @if(isset($todayLatestClockInClockOut) && isset($todayLatestClockInClockOut['clock_in']) && !isset($todayLatestClockInClockOut['clock_out'])) disabled
                                 @endif
@@ -99,8 +96,8 @@
                             </div>
                         </div>
                     </div>
-                    {{--                phase-2:: clock out button--}}
-                    <div x-data="{ openClockOut: false }">
+                    {{--                iteration-2: clock out button--}}
+                    <div  x-data="{ openClockOut: false }">
                         <button @click="openClockOut = true" type="button"
                                 @if(count(\Illuminate\Support\Facades\Auth::user()->todayClockInClockOut) === 0 || isset($todayLatestClockInClockOut['clock_out']))  disabled
                                 @endif
@@ -188,7 +185,7 @@
                     <button @click="open = true" type="button"
                             class="max-w-xs bg-white rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 lg:p-2 lg:rounded-md lg:hover:bg-gray-50"
                             id="user-menu-button" aria-expanded="false" aria-haspopup="true">
-                        {{--                                                <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">--}}
+                        {{--                        <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">--}}
                         <span class="hidden ml-3 text-gray-700 text-sm font-medium lg:block"><span class="sr-only">Open user menu for </span> {{ Auth::user()->name }}</span>
                         <!-- Heroicon name: solid/chevron-down -->
                         <svg class="hidden flex-shrink-0 ml-1 h-5 w-5 text-gray-400 lg:block"
@@ -223,7 +220,5 @@
     </div>
 </div>
 <style>
-    [x-cloak] {
-        display: none;
-    }
+    [x-cloak] { display: none; }
 </style>

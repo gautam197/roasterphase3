@@ -1,4 +1,4 @@
-{{--phaes::2 clock in clock out list page--}}
+{{--iteration-2 clock in clock out list page--}}
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex justify-between">
         <h2 class="text-lg leading-6 font-medium text-gray-900">Shift</h2>

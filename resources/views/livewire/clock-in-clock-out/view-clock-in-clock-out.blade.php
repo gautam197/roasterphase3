@@ -1,4 +1,4 @@
-{{--phaes::2 clock in clock out view page--}}
+{{--iteration-2 clock in clock out view page--}}
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="bg-white shadow sm:rounded-lg sm:p-6">
         <div class="col-span-6 sm:col-span-3">

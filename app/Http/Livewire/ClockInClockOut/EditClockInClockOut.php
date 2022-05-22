@@ -13,14 +13,14 @@ class EditClockInClockOut extends Component
     public $end_time;
 
 
-    //    phase::2 this function mount the current edit clock in clock out data which we need in edit form with prefill data
+    //    iteration-2: this function mount the current edit clock in clock out data which we need in edit form with prefill data
 
     public function mount(Shift $clock_in_clock_out)
     {
         $this->clock_in_clock_out = $clock_in_clock_out;
     }
 
-    //    phase::2 this function validate in real time
+    //    iteration-2: this function validate in real time
 
     public function updated($field)
     {
@@ -28,7 +28,7 @@ class EditClockInClockOut extends Component
             'end_time' => 'required|after_or_equal:today']);
     }
 
-    //    phase-2:: this function validate the request and update the clock in clock out
+    //    iteration-2: this function validate the request and update the clock in clock out
 
     public function updateShift($clock_in_clock_out)
     {
@@ -48,7 +48,7 @@ class EditClockInClockOut extends Component
         $this->redirect('/shifts');
     }
 
-    //    phase-2:: this function render clock in clock out edit page
+    //    iteration-2: this function render clock in clock out edit page
 
     public function render()
     {

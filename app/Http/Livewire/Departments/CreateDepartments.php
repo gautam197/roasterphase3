@@ -9,14 +9,14 @@ class CreateDepartments extends Component
 {
     public $name;
 
-    //    phase::2 this function validate in real time
+    //    iteration-2: this function validate in real time
 
     public function updated($field)
     {
         $this->validateOnly($field, ['name' => 'required|unique:departments,name']);
     }
 
-    //    phase-2:: this function validate the request and store the department
+    //    iteration-2: this function validate the request and store the department
 
     public function addDepartment()
     {
@@ -30,7 +30,7 @@ class CreateDepartments extends Component
         $this->redirect('/departments');
     }
 
-    //    phase-2:: this function render department create page
+    //    iteration-2: this function render department create page
 
     public function render()
     {

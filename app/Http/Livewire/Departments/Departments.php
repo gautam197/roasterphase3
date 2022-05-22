@@ -10,14 +10,14 @@ class Departments extends Component
 {
     use WithPagination;
 
-    //    phase::2 this function delete selected department
+    //    iteration-2: this function delete selected department
 
     public function deleteDepartment(Department $department)
     {
         $department->delete();
     }
 
-    //    phase::2 this function render departments list page where we passed data with pagination
+    //    iteration-2: this function render departments list page where we passed data with pagination
 
     public function render()
     {

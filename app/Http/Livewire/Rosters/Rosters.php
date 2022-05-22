@@ -17,7 +17,7 @@ class Rosters extends Component
     public $sortField = 'start_time';
     public $sortDirection = 'desc';
 
-//    phase::2 this function delete selected roster
+//    iteration-2: this function delete selected roster
     public function deleteRoster(Roster $roster)
     {
         $roster->delete();
@@ -34,7 +34,7 @@ class Rosters extends Component
     }
 
 
-//    phase::2 this function render rosters list page where we passed data with pagination
+//    iteration-2: this function render rosters list page where we passed data with pagination
     public function render()
     {
         $rosters = Auth::user()->hasRole('Staff') ? Roster::where('user_id', Auth::id()) : new Roster();

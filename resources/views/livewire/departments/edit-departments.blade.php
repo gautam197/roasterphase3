@@ -1,4 +1,4 @@
-{{--phaes::2 department edit page--}}
+{{--iteration-2 department edit page--}}
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="bg-white shadow sm:rounded-lg sm:p-6">
         <form wire:submit.prevent="updateDepartment({{$this->department->id}})">

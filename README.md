@@ -1,64 +1,65 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+## Introduction
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+RosterMe is a web application which handles the roster management system for the organization Spot On Global. 
 
-## About Laravel
+Some of the basic functionality of the web application is:
+- The ability for the web administrator to create, update, and delete accounts for the all the users.
+- The ability for the manager to create, update, and delete accounts for the staff.
+- The ability for the manager and staff to log in, log out, update profile information, and reset the passwords for their respective accounts.
+- The ability for the manager to create, update, view, and delete rosters. A roster will include start time, end time, and assigned department.
+- The ability for the staff to view their roster assigned by the manager.
+- The ability for the staff to clock in and clock out from the application which will be recorded as their shifts.
+- The ability for the manager to approve, view, edit, and delete a staff's shift.
+- The ability for the staff to view their shift details.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+The application development environment consists of:
+- HTML and JavaScript has been used for front end development.
+- PHP and mySQL has been used for back-end development.
+- Laravel is the web application framework that will be used for backend development.
+- Tailwind CSS has been used for front end User Experience and User Interface designs.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Software Requirements:
+- XAMPP: version 8.1.2
+- Apache (XAMPP):  version 2.4.52
+- PHP(XAMPP): version 8.1.2.0
+- phpMyAdmin: version 5.1.3
+- MySQL: version 8.0.28
+- Tailwind CSS: version 3.0
+- Laravel Framework: Laravel 9
+- Google Chrome: 99.04844.51
+- Firefox: 98.0.1
+- Safari: 15.3
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+## Installation
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Clone the repository
 
-## Laravel Sponsors
+    git clone https://git.infotech.scu.edu.au/scm/itpa122/itp-122-gconline-team2.git
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Switch to the repo folder
 
-### Premium Partners
+    cd itp-122-gconline-team2
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+Install all the dependencies using composer
 
-## Contributing
+    composer install
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Copy the example env file and make the required configuration changes in the .env file
 
-## Code of Conduct
+    cp .env.example .env
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Generate a new application key
 
-## Security Vulnerabilities
+    php artisan key:generate
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Run the database migrations (**Set the database connection in .env before migrating**)
 
-## License
+    php artisan migrate
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Start the local development server
+
+    php artisan serve
+
+You can now access the server at http://localhost:8000

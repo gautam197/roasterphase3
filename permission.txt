@@ -1,20 +1,3 @@
-#please create permission with following name which is of second column if there is missing of any permission in live
+#Use this sql script to add permission values. This permission  values will be used to provide privilege to staffs and manager.
 
-1,alter-users,web,2022-03-21 07:42:18,2022-03-21 07:51:46
-2,view-users,web,2022-03-21 07:42:28,2022-03-21 07:42:28
-3,delete-users,web,2022-03-21 07:42:33,2022-03-21 07:42:33
-4,alter-roles,web,2022-03-21 07:42:38,2022-03-21 07:42:38
-5,delete-roles,web,2022-03-21 07:42:43,2022-03-21 07:42:43
-6,view-roles,web,2022-03-21 07:42:47,2022-03-21 07:42:47
-7,alter-permissions,web,2022-03-21 07:42:55,2022-03-21 07:42:55
-8,view-permissions,web,2022-03-21 07:43:00,2022-03-21 07:43:00
-9,delete-permissions,web,2022-03-21 07:43:06,2022-03-21 07:43:06
-10,alter-rosters,web,2022-03-22 10:43:31,2022-03-28 12:20:25
-11,delete-rosters,web,2022-03-22 10:43:36,2022-03-28 12:20:30
-12,view-rosters,web,2022-03-22 10:43:42,2022-03-28 12:20:34
-14,view-clock-in-clock-out,web,2022-05-01 11:20:18,2022-05-01 11:20:18
-15,alter-clock-in-clock-out,web,2022-05-01 11:20:28,2022-05-01 11:20:28
-16,delete-clock-in-clock-out,web,2022-05-01 11:20:38,2022-05-01 11:20:38
-17,view-departments,web,2022-05-03 11:09:18,2022-05-03 11:09:18
-18,alter-departments,web,2022-05-03 11:09:24,2022-05-03 11:09:24
-19,delete-departments,web,2022-05-03 11:09:30,2022-05-03 11:09:30
+INSERT INTO permissions VALUES (1,'alter-users','web','2022-03-21 01:57:18','2022-03-21 02:06:46'),(2,'view-users','web','2022-03-21 01:57:28','2022-03-21 01:57:28'),(3,'delete-users','web','2022-03-21 01:57:33','2022-03-21 01:57:33'),(4,'alter-roles','web','2022-03-21 01:57:38','2022-03-21 01:57:38'),(5,'delete-roles','web','2022-03-21 01:57:43','2022-03-21 01:57:43'),(6,'view-roles','web','2022-03-21 01:57:47','2022-03-21 01:57:47'),(7,'alter-permissions','web','2022-03-21 01:57:55','2022-03-21 01:57:55'),(8,'view-permissions','web','2022-03-21 01:58:00','2022-03-21 01:58:00'),(9,'delete-permissions','web','2022-03-21 01:58:06','2022-03-21 01:58:06'),(10,'alter-rosters','web','2022-03-22 04:58:31','2022-03-28 06:35:25'),(11,'delete-rosters','web','2022-03-22 04:58:36','2022-03-28 06:35:30'),(12,'view-rosters','web','2022-03-22 04:58:42','2022-03-28 06:35:34'),(14,'view-clock-in-clock-out','web','2022-05-01 05:35:18','2022-05-01 05:35:18'),(15,'alter-clock-in-clock-out','web','2022-05-01 05:35:28','2022-05-01 05:35:28'),(16,'delete-clock-in-clock-out','web','2022-05-01 05:35:38','2022-05-01 05:35:38'),(17,'view-departments','web','2022-05-03 05:24:18','2022-05-03 05:24:18'),(18,'alter-departments','web','2022-05-03 05:24:24','2022-05-03 05:24:24'),(19,'delete-departments','web','2022-05-03 05:24:30','2022-05-03 05:24:30');

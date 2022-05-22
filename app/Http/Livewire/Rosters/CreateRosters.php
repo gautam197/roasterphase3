@@ -14,7 +14,7 @@ class CreateRosters extends Component
     public $user = '';
     public $department = '';
 
-//    phase::2 this function validate in real time
+//    iteration-2: this function validate in real time
     public function updated($field)
     {
         $this->validateOnly($field, ['start_time' => 'required|after_or_equal:today',
@@ -23,7 +23,7 @@ class CreateRosters extends Component
             'department' => 'required']);
     }
 
-//    phase-2:: this function validate the request and store the roster
+//    iteration-2: this function validate the request and store the roster
     public function addRoster()
     {
         $this->validate([
@@ -43,7 +43,7 @@ class CreateRosters extends Component
         $this->redirect('/rosters');
     }
 
-//    phase-2:: this function render roster create page with data users and departments for selection in form
+//    iteration-2: this function render roster create page with data users and departments for selection in form
     public function render()
     {
         return view('livewire.rosters.create-rosters', [

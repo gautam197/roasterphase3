@@ -16,7 +16,7 @@ class EditRosters extends Component
     public $user = '';
     public $department;
 
-//    phase::2 this function mount the current edit roster data which we need in edit form with prefill data
+//    iteration-2: this function mount the current edit roster data which we need in edit form with prefill data
     public function mount(Roster $roster)
     {
         $this->roster = $roster;
@@ -26,7 +26,7 @@ class EditRosters extends Component
         $this->department = $roster->department;
     }
 
-//    phase::2 this function validate in real time
+//    iteration-2: this function validate in real time
 
     public function updated($field)
     {
@@ -36,7 +36,7 @@ class EditRosters extends Component
             'department' => 'required']);
     }
 
-    //    phase-2:: this function validate the request and update the roster
+    //    iteration-2: this function validate the request and update the roster
 
     public function updateRoster($roster)
     {
@@ -58,7 +58,7 @@ class EditRosters extends Component
         $this->redirect('/rosters');
     }
 
-    //    phase-2:: this function render roster edit page with data users and departments for selection in form
+    //    iteration-2: this function render roster edit page with data users and departments for selection in form
 
     public function render()
     {

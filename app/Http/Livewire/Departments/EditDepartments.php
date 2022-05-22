@@ -11,7 +11,7 @@ class EditDepartments extends Component
     public $department;
     public $name;
 
-    //    phase::2 this function mount the current edit department data which we need in edit form with prefill data
+    //    iteration-2: this function mount the current edit department data which we need in edit form with prefill data
 
     public function mount(Department $department)
     {
@@ -19,14 +19,14 @@ class EditDepartments extends Component
         $this->name = $department->name;
     }
 
-//    phase::2 this function validate in real time
+//    iteration-2: this function validate in real time
 
     public function updated($field)
     {
         $this->validateOnly($field, ['name' => 'required']);
     }
 
-    //    phase-2:: this function validate the request and update the department
+    //    iteration-2: this function validate the request and update the department
 
     public function updateDepartment($departmentId)
     {
@@ -39,7 +39,7 @@ class EditDepartments extends Component
         $this->redirect('/departments');
     }
 
-    //    phase-2:: this function render department edit page
+    //    iteration-2: this function render department edit page
 
     public function render()
     {

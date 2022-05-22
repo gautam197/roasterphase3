@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\DB;
 
 class ClockInClockOutController extends Controller
 {
-//    phase-2:this function does clock in functionality
+//    iteration-2:this function does clock in functionality
     public function clockIn(Request $request)
     {
         $todayDate = Carbon::today()->toDateString();
@@ -48,7 +48,7 @@ class ClockInClockOutController extends Controller
         }
     }
 
-//    phase-2:this function does clock out functionality
+//    iteration-2:this function does clock out functionality
     public function clockOut(Request $request)
     {
         $todayDate = Carbon::today()->toDateString();
@@ -84,7 +84,7 @@ class ClockInClockOutController extends Controller
         }
     }
 
-//  phase-2: this function approve shift of the staff.
+//  iteration-2: this function approve shift of the staff.
     public function approveShift(Request $request, $id)
     {
         try {
@@ -100,7 +100,7 @@ class ClockInClockOutController extends Controller
         }
     }
 
-    //  phase-2: this function approve shift of the staff.
+    //  iteration-2: this function rejects shift of the staff.
     public function rejectShift(Request $request, $id)
     {
         try {

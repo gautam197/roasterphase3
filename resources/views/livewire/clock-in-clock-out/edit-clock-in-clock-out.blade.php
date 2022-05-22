@@ -1,4 +1,4 @@
-{{--phaes::2 clock in clock out edit page--}}
+{{--iteration-2 clock in clock out edit page--}}
 <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="bg-white shadow sm:rounded-lg sm:p-6">
         <form  wire:submit.prevent="updateShift({{$clock_in_clock_out->id}})">
